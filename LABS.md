@@ -27,3 +27,8 @@ implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
 - If an item is selected, udpate the content of `Scaffold` to show an `AndroidVersionDetails` composable
 - Add a `clickable { ... }` `Modifier` to each list `Card` to capture clicks and update the selected item
 - Set the `onClick` handler for the back icon so clicking back clears the currently selected item
+
+## Lesson 4 - Material Theme
+- Create a custom `HelloComposeTheme` composable that wraps, and customizes, `MaterialTheme`
+- Provide both a light mode, and dark mode color palette
+- Use the provided `jetbrainsmono_regular.ttf` font to customize the `body1` `TextStyle` of `MaterialTheme.typography`
