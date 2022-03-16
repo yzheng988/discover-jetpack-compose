@@ -20,3 +20,10 @@ implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
 - Use a `Scaffold` to provide the basic container for the screen composable
 - Configure the `Scaffold` to include a `TopAppBar` that displays the app title
 - Use a `LazyColumn` to display a vertically scrolling list of `Cards` displaying the version info
+
+## Lesson 3 - State Hoisting
+- Use `by rembmer { ... }` to create a variable that holds the currently selected `AndroidVersionInfo`
+- If an item is selected, update the `TopAppBar` to show a back button, and the display name of the selected info
+- If an item is selected, udpate the content of `Scaffold` to show an `AndroidVersionDetails` composable
+- Add a `clickable { ... }` `Modifier` to each list `Card` to capture clicks and update the selected item
+- Set the `onClick` handler for the back icon so clicking back clears the currently selected item
