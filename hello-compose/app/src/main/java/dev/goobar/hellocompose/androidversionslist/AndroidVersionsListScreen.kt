@@ -59,7 +59,14 @@ private fun AndroidVersionInfoCard(info: AndroidVersionInfo, onClick: (AndroidVe
   Card(modifier = Modifier
     .fillMaxWidth()
     .defaultMinSize(minHeight = 120.dp)
-    .clickable { onClick(info) }
+    .combinedClickable(
+      onLongClick = {
+        Toast
+          .makeText(context, "${info.publicName} is my favorite!", Toast.LENGTH_SHORT)
+          .show()
+      },
+      onClick = { onClick(info) }
+    )
   ) {
     Row(
       modifier = Modifier.padding(20.dp),
