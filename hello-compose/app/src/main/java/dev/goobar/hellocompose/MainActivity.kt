@@ -3,7 +3,13 @@ package dev.goobar.hellocompose
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 
 class MainActivity : ComponentActivity() {
 
@@ -13,13 +19,26 @@ class MainActivity : ComponentActivity() {
 
 //  Uncomment the code below, and rebuild, once Compose dependencies are added to the project
 
-//      MaterialTheme {
-//        // A surface container using the 'background' color from the theme
-//        Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
-//          Text(text = "Hello Jetpack Compose!")
-//        }
-//      }
+      MaterialTheme {
+        // A surface container using the 'background' color from the theme
+          FirstComposable()
+      }
     }
   }
+}
 
+@Composable
+fun FirstComposable() {
+    Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
+        Text(text = "Hello Jetpack Compose!")
+    }
+}
+
+@Preview
+@Composable
+fun FirstComposablePreview() {
+    MaterialTheme {
+        // A surface container using the 'background' color from the theme
+        FirstComposable()
+    }
 }
