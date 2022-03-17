@@ -32,3 +32,10 @@ implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
 - Create a custom `HelloComposeTheme` composable that wraps, and customizes, `MaterialTheme`
 - Provide both a light mode, and dark mode color palette
 - Use the provided `jetbrainsmono_regular.ttf` font to customize the `body1` `TextStyle` of `MaterialTheme.typography`
+
+## Lesson 5 - Common UI Patterns
+- Add an "easter egg" `Toast` to your app in response to long clicking a version info card.
+- Add a sort icon to the app bar that shows a `BottomSheet` when clicked
+- Within the bottom sheet, users should be able to select a `Newest first`, or `Oldest first` option to sort the version info list
+- Clicking a sort option should dismiss the `BottomSheet`
+- Show a `SnackBar` indicating which sort option was selected
