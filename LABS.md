@@ -39,3 +39,9 @@ implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
 - Within the bottom sheet, users should be able to select a `Newest first`, or `Oldest first` option to sort the version info list
 - Clicking a sort option should dismiss the `BottomSheet`
 - Show a `SnackBar` indicating which sort option was selected
+
+## Lesson 6 - MVVM with Compose
+- Use the provided `ViewModels` to move state management out of composables and into the `ViewModels`
+- Each `ViewModel` should expose a `StateFlow` called `state` that is used to bind the UI
+- Use `rememberSaveable` to ensure that the `selectedItem` state is persisted across orientation change
+- Move sort management to `AndroidVersionsListViewModel`
