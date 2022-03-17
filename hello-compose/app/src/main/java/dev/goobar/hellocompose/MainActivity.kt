@@ -37,6 +37,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.style.TextOverflow.Companion
 import androidx.compose.ui.unit.dp
+import dev.goobar.hellocompose.design.HelloComposeTheme
 
 class MainActivity : ComponentActivity() {
 
@@ -44,7 +45,7 @@ class MainActivity : ComponentActivity() {
     super.onCreate(savedInstanceState)
     setContent {
 
-      MaterialTheme {
+      HelloComposeTheme() {
         MainActivityContent()
       }
     }
